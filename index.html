@@ -39,35 +39,84 @@
                        Eager to contribute my skills and knowledge to real-world projects and collaborate with innovative professionals in the industry.
                     </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>DSA</span><br>Developing efficient Software Applications</li>
                             <li><span>MERN Developer</span><br>Web App Development</li>
                             <!-- <li><span>DSA</span><br>Developing efficient Software Applications</li> -->
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>DSA</span><br>Developing efficient Software Applications</li>
-                            <li><span>MERN Developer</span><br>Web App Development</li>
-                            <!-- <li><span>DSA</span><br>Developing efficient Software Applications</li> -->
+                            <li><span>2023 - Current</span><br>DSA - Apna Collage</li>
+                            <li><span>2021-2023</span><br>MERN - CodeHelp @ Love Babbar</li>
+                            <li><span>2022</span><br>Internship at CodeClause ( Java Developer )</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>DSA</span><br>Developing efficient Software Applications</li>
-                            <li><span>MERN Developer</span><br>Web App Development</li>
-                            <!-- <li><span>DSA</span><br>Developing efficient Software Applications</li> -->
+                            <li><span>2021-2025</span><br>CSE Engeneering at VIT Bhopal University</li>
+                            <li><span>2020</span><br>12th - Gurukul Vidyapeeth</li>
+                            <li><span>2018</span><br>10th - JNV Seraikella</li>
                         </ul>
                     </div>    
-                     <!-- //33.08 -->
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- ---------------services------------------- -->
+
+ <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>DSA</h2>
+                <p>At DSA Services, we specialize in providing comprehensive solutions in the realm of Data Structures 
+                   and Algorithms, catering to the ever-evolving needs of the digital landscape. Our offerings are 
+                   designed to empower businesses, developers, and organizations to optimize their software systems for 
+                   efficiency, scalability, and performance.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>MERN Development</h2>
+                <p>Unlock the full potential of modern web development with MERN Services, your trusted partner for 
+                    building dynamic, scalable, and feature-rich applications using the MERN stack – MongoDB, Express.js,
+                    React, and Node.js.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>UX/UI Design</h2>
+                <p> we understand that user experience (UX) and user interface (UI) design are at the heart of successful
+                    digital products. Our UX/UI Design Services are crafted to transform your vision into an immersive 
+                    and user-centric digital experience that captivates and converts.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+ </div>   
+                               //47.03
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>    
 </body>
 </html>
