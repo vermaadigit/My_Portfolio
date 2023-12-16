@@ -190,6 +190,10 @@ nav ul li a:hover::after{
     margin-bottom: 15px;
 }
 
+.services-list div p{
+    font-size: 18px;
+}
+
 .services-list div a{
     text-decoration: none;
     color: #fff;
@@ -363,4 +367,50 @@ form .btn2{
     background: #262626;
     font-weight: 300;
     margin-top: 20px;
+}
+
+/* ------------CSS Small Screen-------------- */
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(Images/Phone_Background.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.8s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+
+    }
+    
 }

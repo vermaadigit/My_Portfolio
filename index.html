@@ -12,13 +12,15 @@
         <div class="container">
             <nav>
                 <img src="Images/Aditya_Logo.png" class="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>DSA | MERN Developer</p>
@@ -80,9 +82,7 @@
                 <i class="fa-solid fa-code"></i>
                 <h2>DSA</h2>
                 <p>At DSA Services, we specialize in providing comprehensive solutions in the realm of Data Structures 
-                   and Algorithms, catering to the ever-evolving needs of the digital landscape. Our offerings are 
-                   designed to empower businesses, developers, and organizations to optimize their software systems for 
-                   efficiency, scalability, and performance.
+                   and Algorithms, catering to the ever-evolving needs of the digital landscape. 
                 </p>
                 <a href="#">Learn More</a>
             </div>
@@ -194,6 +194,20 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
-</script>    
+</script>   
+
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+
+
 </body>
 </html>
